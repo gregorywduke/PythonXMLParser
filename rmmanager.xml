@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a very simple XML format file that demonstrates role based authentication -->
+<!-- To assign the role to a specific user change the username to match the user runnning the application -->
+<RoleManager MajorVersion="1" MinorVersion="0">
+  <RMApplication Name="Name" Description="" ApplicationVersion="" ApplicationType="">
+    <RMAppTask Name="Administrator" Description="" TaskActive="True"></RMAppTask>
+    <RMAppTask Name="Security Officer" Description="" TaskActive="True"></RMAppTask>
+	<RMAppTask Name="User" Description="" TaskActive="True"></RMAppTask>
+    <RMAppTask Name="Help" Description="" RoleActive="True"></RMAppTask>
+    <RMAppTask Name="Exit" Description="" RoleActive="True"></RMAppTask>
+    <RMRole Name="admin" Description="" RoleActive="True">
+	  <RMTaskLink>Administrator</RMTaskLink>
+      <RMMember>student-adm</RMMember>
+	</RMRole>
+    <RMRole Name="so" Description="" RoleActive="True">
+	  <RMTaskLink>Security Officer</RMTaskLink>
+      <RMMember>jdoe</RMMember>
+	</RMRole>
+    <RMRole Name="user" Description="" RoleActive="True">
+	  <RMTaskLink>User</RMTaskLink>
+      <RMMember>jbloggs</RMMember>
+	</RMRole>
+  </RMApplication>
+</RoleManager>
